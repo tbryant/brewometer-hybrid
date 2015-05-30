@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.baronbrew.brewometer.cordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Brewometer</name>
+    <description>
+        Reads data from your brewometers.  Buy more brewometers here: http://brewometer.net
+    </description>
+    <author email="info@baronbrew.com" href="http://baronbrew.com">
+        Brewometer Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="www/ui/images/BrewometerCap128.png" />
+    <splash src="www/ui/images/black.png" width="320" height="480"/>
+    <splash src="www/ui/images/black.png" width="640" height="960"/>
+    <splash src="www/ui/images/black.png" width="768" height="1024"/>
+    <splash src="www/ui/images/black.png" width="1536" height="2048"/>
+    <splash src="www/ui/images/black.png" width="1024" height="768"/>
+    <splash src="www/ui/images/black.png" width="2048" height="1536"/>
+    <splash src="www/ui/images/black.png" width="640" height="1136"/>
+    <splash src="www/ui/images/black.png" width="750" height="1334"/>
+    <splash src="www/ui/images/black.png" width="1242" height="2208"/>
+    <splash src="www/ui/images/black.png" width="2208" height="1242"/>
+
+
+</widget>

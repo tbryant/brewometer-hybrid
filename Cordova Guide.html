@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://evothings.com/doc/build/cordova-guide.html -->
+<html class=" js no-touch cssanimations csstransforms csstransforms3d csstransitions" lang="en-GB" style=""><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordova Guide</title>
+  <link rel="profile" href="http://gmpg.org/xfn/11">
+  <link rel="pingback" href="http://evothings.com/xmlrpc.php">
+  <link rel="alternate" type="application/rss+xml" title="Evothings » Feed" href="http://evothings.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Evothings » Comments Feed" href="http://evothings.com/comments/feed/">
+<link rel="stylesheet" id="wordpresslist-css" href="./Cordova Guide_files/admin.css" type="text/css" media="all">
+<link rel="stylesheet" id="x-stack-css" href="./Cordova Guide_files/style.css" type="text/css" media="all">
+<link rel="stylesheet" id="x-font-custom-css" href="./Cordova Guide_files/css" type="text/css" media="all">
+<link rel="stylesheet" id="x-shortcodes-css" href="./Cordova Guide_files/renew.css" type="text/css" media="all">
+<!-- This site uses the Google Analytics by Yoast plugin v5.3 - Universal disabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script async="" src="./Cordova Guide_files/analytics.js"></script><script type="text/javascript" async="" src="./Cordova Guide_files/ga.js"></script><script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-44159401-1']);
+	_gaq.push(['_gat._forceSSL']);
+	_gaq.push(['_trackPageview','/404.html?page=' + document.location.pathname + document.location.search + '&from=' + document.referrer]);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type="text/javascript" src="./Cordova Guide_files/jquery.js"></script>
+<script type="text/javascript" src="./Cordova Guide_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Cordova Guide_files/x-head.min.js"></script>
+<script type="text/javascript" src="./Cordova Guide_files/x-shortcodes-head.min.js"></script>
+<script>
+    (function(f,b,g){
+        var xo=g.prototype.open,xs=g.prototype.send,c;
+        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+        f._hjSettings={hjid:5206, hjsv:2};
+        function ls(){f.hj.documentHtml=b.documentElement.outerHTML;c=b.createElement("script");c.async=1;c.src="//static.hotjar.com/c/hotjar-5206.js?sv=2";b.getElementsByTagName("head")[0].appendChild(c);}
+        if(b.readyState==="interactive"||b.readyState==="complete"||b.readyState==="loaded"){ls();}else{if(b.addEventListener){b.addEventListener("DOMContentLoaded",ls,false);}}
+        if(!f._hjPlayback && b.addEventListener){
+            g.prototype.open=function(l,j,m,h,k){this._u=j;xo.call(this,l,j,m,h,k)};
+            g.prototype.send=function(e){var j=this;function h(){if(j.readyState===4){f.hj("_xhr",j._u,j.status,j.response)}}this.addEventListener("readystatechange",h,false);xs.call(this,e)};
+        }
+    })(window,document,window.XMLHttpRequest);
+</script>
+    <script type="text/javascript" src="./Cordova Guide_files/OS-Adder.js"></script>
+    <style type="text/css">	.ssba {
+											padding: 0px;
+											
+											
+											
+										}
+										.ssba img		
+										{ 	
+											width: 45px !important;
+											padding: 10px;
+											border:  0;
+											box-shadow: none !important;
+											display: inline !important;
+											vertical-align: middle;
+										}
+										.ssba, .ssba a		
+										{
+											text-decoration:none;
+											background: none;
+											
+											font-size: 	12px;
+											color: 		#636363!important;
+											font-weight: bold;
+										}</style><meta property="og:site_name" content="Evothings"><meta property="og:title" content="Hands on guide to building a native JavaScript iBeacon app using Cordova"><meta property="og:description" content="Making mobile apps for IoT easy, fast and fun to build!"><meta property="og:image" content=""><meta property="og:url" content="http://evothings.com/hands-on-guide-to-building-a-native-javascript-ibeacon-app-using-cordova/"><meta property="og:type" content="website"><meta name="generator" content="Powered by Visual Composer - drag and drop page builder for WordPress.">
+<!--[if IE 8]><link rel="stylesheet" type="text/css" href="http://evothings.com/wp-content/plugins/js_composer/assets/css/vc-ie8.css" media="screen"><![endif]-->
+<style type="text/css"></style>
+
+<style type="text/css">
+.synved-social-resolution-single {
+display: inline-block;
+}
+.synved-social-resolution-normal {
+display: inline-block;
+}
+.synved-social-resolution-hidef {
+display: none;
+}
+
+@media only screen and (min--moz-device-pixel-ratio: 2),
+only screen and (-o-min-device-pixel-ratio: 2/1),
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx),
+only screen and (min-resolution: 192dpi) {
+	.synved-social-resolution-normal {
+	display: none;
+	}
+	.synved-social-resolution-hidef {
+	display: inline-block;
+	}
+}
+</style>
+<style id="x-customizer-css-output" type="text/css">a,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,.x-comment-time:hover,#reply-title small a,.comment-reply-link:hover,.x-comment-author a:hover{color:#e15a64;}a:hover,#reply-title small a:hover,.x-recent-posts a:hover .h-recent-posts{color:#cb414b;}.entry-title:before{color:#f1ba63;}a.x-img-thumbnail:hover,li.bypostauthor > article.comment{border-color:#e15a64;}.flex-direction-nav a,.flex-control-nav a:hover,.flex-control-nav a.flex-active,.x-dropcap,.x-skill-bar .bar,.x-pricing-column.featured h2,.h-comments-title small,.pagination a:hover,.x-entry-share .x-share:hover,.entry-thumb,.widget_tag_cloud .tagcloud a:hover,.widget_product_tag_cloud .tagcloud a:hover,.x-highlight,.x-recent-posts .x-recent-posts-img,.x-recent-posts .x-recent-posts-img:before,.x-portfolio-filters{background-color:#e15a64;}.x-recent-posts a:hover .x-recent-posts-img,.x-portfolio-filters:hover{background-color:#cb414b;}.x-main{width:68.79803%;}.x-sidebar{width:24.79803%;}.x-topbar .p-info,.x-topbar .p-info a,.x-topbar .x-social-global a{color:#ffffff;}.x-topbar .p-info a:hover{color:#959baf;}.x-topbar{background-color:#d35400;}.x-navbar .desktop .x-nav > li:before{padding-top:40px;}.x-brand,.x-brand:hover,.x-navbar .desktop .x-nav > li > a,.x-navbar .desktop .sub-menu li > a,.x-navbar .mobile .x-nav li a{color:#777777;}.x-navbar .desktop .x-nav > li > a:hover,.x-navbar .desktop .x-nav > .x-active > a,.x-navbar .desktop .x-nav > .current-menu-item > a,.x-navbar .desktop .sub-menu li > a:hover,.x-navbar .desktop .sub-menu li.x-active > a,.x-navbar .desktop .sub-menu li.current-menu-item > a,.x-navbar .desktop .x-nav .x-megamenu > .sub-menu > li > a,.x-navbar .mobile .x-nav li > a:hover,.x-navbar .mobile .x-nav li.x-active > a,.x-navbar .mobile .x-nav li.current-menu-item > a{color:#656565;}.x-btn-navbar,.x-btn-navbar:hover{color:#ffffff;}.x-navbar .desktop .sub-menu li:before,.x-navbar .desktop .sub-menu li:after{background-color:#777777;}.x-navbar,.x-navbar .sub-menu{background-color:#ffffff !important;}.x-btn-navbar,.x-btn-navbar.collapsed:hover{background-color:#666666;}.x-btn-navbar.collapsed{background-color:#444444;}.x-navbar .desktop .x-nav > li > a:hover > span,.x-navbar .desktop .x-nav > li.x-active > a > span,.x-navbar .desktop .x-nav > li.current-menu-item > a > span{box-shadow:0 2px 0 0 #656565;}.x-navbar .desktop .x-nav > li > a{height:95px;padding-top:40px;}.x-navbar .desktop .x-nav > li ul{top:95px;}.x-colophon.bottom{background-color:#ffffff;}.x-colophon.bottom,.x-colophon.bottom a,.x-colophon.bottom .x-social-global a{color:#ffffff;}.h-landmark{font-weight:300;}.x-brand,.x-brand:hover{color:#444444;}.x-comment-author a{color:#424242;}.x-comment-author a,.comment-form-author label,.comment-form-email label,.comment-form-url label,.comment-form-rating label,.comment-form-comment label,.widget_calendar #wp-calendar caption,.widget_calendar #wp-calendar th,.x-accordion-heading .x-accordion-toggle,.x-nav-tabs > li > a:hover,.x-nav-tabs > .active > a,.x-nav-tabs > .active > a:hover{color:#333333;}.widget_calendar #wp-calendar th{border-bottom-color:#333333;}.pagination span.current,.x-portfolio-filters-menu,.widget_tag_cloud .tagcloud a,.h-feature-headline span i,.widget_price_filter .ui-slider .ui-slider-handle{background-color:#333333;}@media (max-width:979px){.x-widgetbar{left:0;right:0;}}body{font-size:14px;font-style:normal;font-weight:300;color:#424242;background-color:#ffffff;}a:focus,select:focus,input[type="file"]:focus,input[type="radio"]:focus,input[type="submit"]:focus,input[type="checkbox"]:focus{outline:thin dotted #333;outline:5px auto #e15a64;outline-offset:-1px;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-style:normal;font-weight:900;letter-spacing:-1px;}.w-h{font-weight:900 !important;}.x-container.width{width:88%;}.x-container.max{max-width:1000px;}.x-main.full{float:none;display:block;width:auto;}@media (max-width:979px){.x-main.full,.x-main.left,.x-main.right,.x-sidebar.left,.x-sidebar.right{float:none;display:block;width:auto !important;}}.entry-header,.entry-content{font-size:16px;}.x-brand{font-style:normal;font-weight:400;letter-spacing:-3px;}.x-brand img{width:100px;}body,input,button,select,textarea{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}.x-brand{font-family:"Pacifico","Helvetica Neue",Helvetica,sans-serif;}.x-navbar .x-nav > li > a{font-family:"Lato","Helvetica Neue",Helvetica,sans-serif;}h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.h1 a,.h2 a,.h3 a,.h4 a,.h5 a,.h6 a,blockquote{color:#333333;}.cfc-h-tx{color:#333333 !important;}.cfc-h-bd{border-color:#333333 !important;}.cfc-h-bg{background-color:#333333 !important;}.cfc-b-tx{color:#424242 !important;}.cfc-b-bd{border-color:#424242 !important;}.cfc-b-bg{background-color:#424242 !important;}.x-navbar{font-size:14px;}.x-navbar-inner{min-height:95px;}.x-brand{font-size:1px;font-size:0.1rem;}.x-navbar .x-brand{margin-top:10px;}.x-navbar .x-nav-wrap .x-nav > li > a{font-style:normal;font-weight:400;text-transform:uppercase;}.x-btn-navbar{margin-top:20px;;}.x-btn-navbar,.x-btn-navbar.collapsed{font-size:22px;}@media (max-width:979px){}.x-btn,.button,[type="submit"]{color:#ffffff;border-color:#656565;background-color:#777777;}.x-btn:hover,.button:hover,[type="submit"]:hover{color:#fff;border-color:#555555;background-color:#555555;}.x-btn.x-btn-real,.x-btn.x-btn-real:hover{margin-bottom:0.25em;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.65);}.x-btn.x-btn-real{box-shadow:0 0.25em 0 0 #2a2a2a,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-real:hover{box-shadow:0 0.25em 0 0 #2a2a2a,0 4px 9px rgba(0,0,0,0.75);}.x-btn.x-btn-flat,.x-btn.x-btn-flat:hover{margin-bottom:0;text-shadow:0 0.075em 0.075em rgba(0,0,0,0.65);box-shadow:none;}.x-btn.x-btn-transparent,.x-btn.x-btn-transparent:hover{margin-bottom:0;border-width:3px;text-shadow:none;text-transform:uppercase;background-color:transparent;box-shadow:none;}.x-btn-circle-wrap:before{width:172px;height:43px;background:url(http://evothings.com/wp-content/themes/x/framework/img/global/btn-circle-top-small.png) center center no-repeat;-webkit-background-size:172px 43px;background-size:172px 43px;}.x-btn-circle-wrap:after{width:190px;height:43px;background:url(http://evothings.com/wp-content/themes/x/framework/img/global/btn-circle-bottom-small.png) center center no-repeat;-webkit-background-size:190px 43px;background-size:190px 43px;}.x-btn,.x-btn:hover,.button,.button:hover,[type="submit"],[type="submit"]:hover{text-shadow:0 0.075em 0.075em rgba(0,0,0,0.5);}.x-btn,.button,[type="submit"]{border-radius:0.25em;}.x-btn,.button,[type="submit"]{padding:0.579em 1.105em 0.842em;font-size:19px;font-size:1.9rem;}</style>
+    <style id="x-customizer-css-custom" type="text/css">
+      article h1 { font-size: 24px; }
+article h2 { font-size: 20px; }
+article h3 { font-size: 18px }
+article h4 { font-size: 16px; }
+article pre { font-size: 80%; }
+.sub-menu { top: 75px !important; }
+.sub-menu li { font-size:14px; text-transform:uppercase; }
+#menu-item-1490 a { color: #cb414b; }
+.x-searchform-overlay .form-search label { font-size: 3.2em; }
+blockquote { font-size: 1.7rem; }    </style>
+
+  <script async="" src="./Cordova Guide_files/hotjar-5206.js"></script></head>
+
+<body class="error404 x-renew x-navbar-static-active x-full-width-layout-active x-full-width-active wpb-js-composer js-comp-ver-4.3.5 vc_responsive x-v3_2_1 x-child-theme-active x-shortcodes-v3_0_2 mac">
+
+  
+  <div id="top" class="site">
+
+  
+  
+
+  <header class="masthead masthead-inline" role="banner">
+    
+    
+
+  <div class="x-navbar-wrap">
+    <div class="x-navbar">
+      <div class="x-navbar-inner">
+        <div class="x-container max width">
+          
+
+<a href="http://evothings.com/" class="x-brand img" title="Making mobile apps for IoT easy, fast and fun to build!">
+  <img src="./Cordova Guide_files/evothings_logo_large_white1.png" alt="Making mobile apps for IoT easy, fast and fun to build!"></a>          
+<a href="http://evothings.com/doc/build/cordova-guide.html#" class="x-btn-navbar collapsed" data-toggle="collapse" data-target=".x-nav-wrap.mobile">
+  <i class="x-icon-bars"></i>
+  <span class="visually-hidden">Navigation</span>
+</a>
+
+<nav class="x-nav-wrap desktop" role="navigation">
+  <ul id="menu-new-main-menu" class="x-nav"><li id="menu-item-1491" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1491"><a href="http://evothings.com/"><span>Home</span></a></li>
+<li id="menu-item-1490" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1490"><a href="http://evothings.com/download/"><span>Download</span></a></li>
+<li id="menu-item-1453" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1453"><a href="http://evothings.com/developer/"><span>Developer Center</span></a>
+<ul class="sub-menu">
+	<li id="menu-item-1454" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1454"><a href="http://evothings.com/getting-started-with-evothings-studio-in-90-seconds/"><span>Getting started</span></a></li>
+	<li id="menu-item-1457" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1457"><a href="http://evothings.com/starterkits/"><span>Starter Kits</span></a></li>
+	<li id="menu-item-1461" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1461"><a href="http://evothings.com/things/"><span>Supported Things</span></a></li>
+	<li id="menu-item-1462" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1462"><a href="http://evothings.com/tutorials/"><span>Tutorials</span></a></li>
+	<li id="menu-item-1464" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1464"><a href="http://evothings.com/doc/"><span>Documentation</span></a></li>
+	<li id="menu-item-1465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1465"><a href="http://evothings.com/forum/"><span>Forum</span></a></li>
+	<li id="menu-item-1455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1455"><a href="http://evothings.com/blog/"><span>Tech blog</span></a></li>
+</ul>
+</li>
+<li id="menu-item-1466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1466"><a href="http://evothings.com/news/"><span>News</span></a></li>
+<li id="menu-item-1467" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1467"><a href="http://evothings.com/about/"><span>About Us</span></a></li>
+<li class="menu-item x-menu-item x-menu-item-search"><a href="http://evothings.com/doc/build/cordova-guide.html#" class="x-btn-navbar-search"><span><i class="x-icon x-icon-search"></i><span class="x-hidden-desktop"> Search</span></span></a></li></ul></nav>
+
+<div class="x-nav-wrap mobile collapse">
+  <ul id="menu-new-main-menu-1" class="x-nav"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1491"><a href="http://evothings.com/"><span>Home</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1490"><a href="http://evothings.com/download/"><span>Download</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1453"><a href="http://evothings.com/developer/"><span>Developer Center</span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1454"><a href="http://evothings.com/getting-started-with-evothings-studio-in-90-seconds/"><span>Getting started</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1457"><a href="http://evothings.com/starterkits/"><span>Starter Kits</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1461"><a href="http://evothings.com/things/"><span>Supported Things</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1462"><a href="http://evothings.com/tutorials/"><span>Tutorials</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1464"><a href="http://evothings.com/doc/"><span>Documentation</span></a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1465"><a href="http://evothings.com/forum/"><span>Forum</span></a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1455"><a href="http://evothings.com/blog/"><span>Tech blog</span></a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1466"><a href="http://evothings.com/news/"><span>News</span></a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1467"><a href="http://evothings.com/about/"><span>About Us</span></a></li>
+<li class="menu-item x-menu-item x-menu-item-search"><a href="http://evothings.com/doc/build/cordova-guide.html#" class="x-btn-navbar-search"><span><i class="x-icon x-icon-search"></i><span class="x-hidden-desktop"> Search</span></span></a></li></ul></div>        </div>
+      </div>
+    </div>
+  </div>
+
+  </header>
+
+  
+  
+
+<div class="x-container max width offset">
+	<div class="x-main full" role="main">
+
+
+
+<!--
+File: build-cordova-apps.html
+Description: How to build an app with Cordova.
+Author: Mikael Kindborg
+Copyright (c) 2013-2014 Evothings AB
+-->
+
+<meta charset="utf-8">
+<title>Cordova Guide</title>
+<script src="./Cordova Guide_files/include-viewport.js"></script><meta name="viewport" content="user-scalable=yes,initial-scale=1,width=device-width,target-densitydpi=device-dpi">
+<script src="./Cordova Guide_files/include-css-scripts.js"></script><script src="./Cordova Guide_files/jquery-2.0.3.js"></script><link rel="stylesheet" href="http://evothings.com/doc/css/evo-doc-content.css" media="all">
+
+
+
+<div class="evo-heading">Cordova Guide</div>
+
+<div class="evo-page"><div class="evo-content">
+
+<script src="./Cordova Guide_files/include-main-menu.js"></script><div id="main-menu-wide" class="hyper-main-menu evo-btn-group evo-btn-group-justified"><a href="http://evothings.com/doc/index.html" type="button" class="evo-btn evo-btn-lg evo-btn-red">Studio</a><a href="http://evothings.com/doc/studio/tutorials.html" type="button" class="evo-btn evo-btn-lg evo-btn-yellow">Tutorials</a><a href="http://evothings.com/doc/studio/api-overview.html" type="button" class="evo-btn evo-btn-lg evo-btn-green">APIs</a><a href="http://evothings.com/doc/examples/examples.html" type="button" class="evo-btn evo-btn-lg evo-btn-blue">Examples</a><a href="http://evothings.com/doc/build/build-overview.html" type="button" class="evo-btn evo-btn-lg evo-btn-indigo">Build</a></div><div id="main-menu-narrow"><div class="hyper-main-menu evo-btn-group evo-btn-group-justified"><a href="http://evothings.com/doc/index.html" type="button" style="border-bottom-left-radius: 0px;" class="evo-btn evo-btn-lg evo-btn-red">Studio</a><a href="http://evothings.com/doc/studio/tutorials.html" type="button" class="evo-btn evo-btn-lg evo-btn-yellow">Tutorials</a><a href="http://evothings.com/doc/studio/api-overview.html" type="button" style="border-bottom-right-radius: 0px;" class="evo-btn evo-btn-lg evo-btn-green">APIs</a></div><div class="hyper-main-menu evo-btn-group evo-btn-group-justified"><a href="http://evothings.com/doc/examples/examples.html" type="button" style="border-top-left-radius: 0px;" class="evo-btn evo-btn-lg evo-btn-blue">Examples</a><a href="http://evothings.com/doc/build/build-overview.html" type="button" style="border-top-right-radius: 0px;" class="evo-btn evo-btn-lg evo-btn-indigo">Build</a></div></div>
+
+<div class="evo-box evo-content-index">
+	<script src="./Cordova Guide_files/include-build-top-menu.js"></script><script src="./Cordova Guide_files/include-evothings-logo.js"></script><a href="http://evothings.com/"><img src="./Cordova Guide_files/evothings_logo_outline.svg" width="100%"></a><br><div class="evo-box"><a href="http://evothings.com/doc/build/share-apps.html">Share Your App</a><br><a href="http://evothings.com/doc/build/build-overview.html">Build Overview</a><br></div>
+	<div class="evo-box">
+		<a href="http://evothings.com/doc/build/cordova-guide.html#Introduction">Cordova Guide</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#SummaryOfBuildSteps">Summary of Build Steps</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#CreatingCordovaProject">Creating a Cordova Project</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#BuildingForIOS">Building for iOS</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#BuildingForAndroid">Building for Android</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#AddingPlugins">Adding Plugins</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#CordovaDirectoryStructure">Cordova Directory Structure</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#Workflow">Workflow Speedup</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#SetupCordovaForEvothings">Setup Cordova for Evothings</a><br>
+		<a href="http://evothings.com/doc/build/cordova-guide.html#SupportedPlatforms">Supported Platforms</a><br>
+	</div>
+</div>
+
+<div id="Introduction" class="evo-box">
+	<h1>Cordova Guide</h1>
+
+	<p><a href="http://cordova.apache.org/">Apache Cordova</a> is a build system for creating native mobile apps with bundled HTML and JavaScript content. Apps built with Cordova are native apps that can be published on the app stores. Furthermore, you can add custom native plugins to extend the functionality of your app.</p>
+
+	<p>To learn how to install Cordova and mobile SDKs on your system, please go to the <a href="http://cordova.apache.org/">Build Overview</a>.</p>
+
+	<p>Below we will show how to set up and build a Cordova project. Cordova is based on working with the command line in a terminal window (Cordova CLI = Command Line Interface). Do not fear! The commands for building apps are quite simple.</p>
+
+	<!-- Check that the version number in this cordova link matches evothings-client/workfile.rb, @requiredCordovaVersion. -->
+	<p>You can also consult the Cordova documentation to learn more about how to set up and build projects: <a href="http://cordova.apache.org/docs/en/3.6.0/guide_cli_index.md.html">cordova.apache.org/docs/en/3.6.0/guide_cli_index.md.html</a></p>
+</div>
+
+<div id="SummaryOfBuildSteps" class="evo-box">
+	<h2>Summary of Build Steps</h2>
+
+	<p>When you have used Evothings Client to develop an app it is straightforward to create a Cordova app from your project files. In essence, just put your HTML/CSS/JS files into the Cordova "www" folder. That's it!</p>
+
+	<p>You can also <a href="http://evothings.com/doc/build/cordova-guide.html#SetupCordovaForEvothings">run your Cordova app from Evothings Workbench</a>, and take advantage of the fast reload-on-save functionality. This means there is no need to rebuild the Cordova app during development, unless you made native code changes such as adding a new plugin.</p>
+
+	<p>Here is a step-by-step guide for how to create a Cordova app from your Evothings project. For details regarding each step, see sections below.</p>
+
+	<p>Initial setup to create the project:</p>
+
+	<ul>
+		<li><p><a href="http://evothings.com/doc/build/cordova-guide.html#CreatingCordovaProject">Create</a> a new Cordova project.</p></li>
+		<li><p>Delete the contents of the www folder.</p></li>
+		<li><p>Move or copy the files from the Evothings project folder to the Cordova www folder.</p></li>
+		<li><p><a href="http://evothings.com/doc/build/cordova-guide.html#AddingPlugins">Add plugins</a> needed.</p></li>
+		<li><p>Add target platforms (ios and/or android).</p></li>
+	</ul>
+
+	<p>For each code update:</p>
+	<ul>
+		<li><p>Build for the target platforms</p></li>
+	</ul>
+
+	<p>Example of one-time initial setup:</p><p>
+
+	</p><pre>cordova create DemoProject com.evothings.demoapp DemoApp
+cd DemoProject
+(delete files in www-folder, using file browser or command line)
+(move or copy files from your project to www, using file browser or command line)
+(add plugins using <b>cordova plugin add</b>)
+cordova platform add ios
+cordova platform add android</pre>
+
+	<p>Then build the native app (for iOS and Android):</p><p>
+
+	</p><pre>cordova build ios
+cordova build android</pre>
+
+    <p>As mentioned, to <a href="http://evothings.com/doc/build/cordova-guide.html#SetupCordovaForEvothings">save development time</a> you can use Evothings Workbench with any Cordova app. This gives you fast reload-on-save with your own app (in this case you do not use Evothings Client). This is useful for example if you wish to use plugins not included in Evothings Client.</p><p>
+
+    </p><p>Read further below for detailed descriptions of the steps outlined above.</p><p>
+</p></div>
+
+<div id="CreatingCordovaProject" class="evo-box">
+	<h2>Creating a Cordova Project (iOS and Android)</h2>
+	<p>Here is how to create a new Cordova project (procedure is the same for all platforms):</p>
+	<ol>
+		<li><p>Open a command-line window</p></li>
+		<li><p>Go to a folder where you want the project subfolder to be created.</p>
+		</li><li><p>Use the <b>cordova create</b> command to create a project. This command has the following form:
+		</p><pre>cordova create project-folder app-identifier app-name</pre>
+		Here is an example that will create a folder called "DemoProject" with project template files:
+		<pre>cordova create DemoProject com.evothings.demoapp DemoApp</pre>
+		Note that creating the project may take a while.<p></p></li>
+		<li><p>To issue further Cordova commands, move into the project folder, e.g. by typing:</p><pre>cd DemoProject</pre><p></p></li>
+	</ol>
+<p></p>
+</div>
+
+<div id="BuildingForIOS" class="evo-box">
+	<h2>Building for iOS</h2>
+	<p>Here is how you build your new Cordova project for iOS:</p>
+	<ol>
+		<li><p>Make sure you are in the project folder in a terminal window</p></li>
+		<li><p>Add the iOS platform to the project. Note that this only needs to be done once for each project:
+		</p><pre>cordova platform add ios</pre><p></p></li>
+		<li><p>Build the project:
+		</p><pre>cordova build ios</pre><p></p></li>
+		<li><p>The output is an Xcode project, located in subfolder <b>platforms/ios</b>. Open a Finder window and navigate to the folder, there you will find the file <b>DemoApp.xcodeproj</b> (assuming you named your app "DemoApp"). Open this file to launch the project in Xcode. From Xcode you can run the app in the iOS simulator, or deploy the app to a devices (deploying to device requires membership in Apple's iOS Developer Program).</p></li>
+	</ol>
+</div>
+
+<div id="BuildingForAndroid" class="evo-box">
+	<h2>Building for Android</h2>
+	<p>Here is how you build your new Cordova project for Android:</p>
+	<ol>
+		<li><p>Make sure you are in the project folder in a terminal window</p></li>
+		<li><p>Add the Android platform to the project. Note that this only needs to be done once for each project:
+		</p><pre>cordova platform add android</pre><p></p></li>
+		<li><p>Build the project:
+		</p><pre>cordova build android</pre><p></p></li>
+		<li><p>The output is a debug-signed apk-file, located in subfolder <b>platforms/android/ant-build</b></p></li>
+		<li><p>Deploy the apk-file to a device using the <b>adb install</b> command (adb = Android Debug Bridge, a command-line tool for Android).</p><p>Deploying the app to a device is a bit different depending on which operating system you are using, because of the different path separators used.</p>
+		<p><b>Windows:</b></p>
+		<pre>adb install -r platforms\android\ant-build\DemoApp-debug.apk</pre>
+		<p><b>OS X:</b></p>
+		<pre>adb install -r platforms/android/ant-build/DemoApp-debug.apk</pre>
+		<p><b>Linux:</b></p>
+		<pre>adb install -r platforms/android/ant-build/DemoApp-debug.apk</pre>
+		<p>Above examples assume you named your app "DemoApp".</p>
+		<p>The switch "-r" means "reinstall" and will overwrite the app if it is already installed (this is convenient, because then you don't have to uninstall the app before installing it again).</p></li>
+	</ol>
+</div>
+
+<div id="AddingPlugins" class="evo-box">
+	<h2>Adding Plugins</h2>
+	<p>Cordova plugins add native functionality to JavaScript. Here is how to add plugins to your project:</p>
+	<ol>
+		<li><p>Open a terminal window and go to the Cordova project folder.</p></li>
+		<li><p>Use the <b>cordova plugin add</b> command to add plugins. Here are examples of plugins to add:
+		</p><pre>cordova plugin add org.apache.cordova.device</pre>
+		<pre>cordova plugin add org.apache.cordova.console</pre>
+		<pre>cordova plugin add org.apache.cordova.vibration</pre>
+		<p></p></li>
+	</ol>
+	<p>Read more about plugins in the Cordova documentation: <a href="http://cordova.apache.org/docs/en/3.6.0/guide_cli_index.md.html">cordova.apache.org/docs/en/3.6.0/guide_cli_index.md.html</a></p>
+	<p>Documentation for standard Cordova plugins: <a href="http://cordova.apache.org/docs/en/3.6.0/cordova_plugins_pluginapis.md.html">cordova.apache.org/docs/en/3.6.0/cordova_plugins_pluginapis.md.html</a></p>
+</div>
+
+<div id="CordovaDirectoryStructure" class="evo-box">
+	<h2>Cordova Directory Structure</h2>
+	<p>This is the directory layout of a generated Cordova project. Put your HTML/CSS/JS in folder <b>www</b>. Edit <b>config.xml</b> to include the relevant settings for your project. Build output is found in the <b>platforms</b> folder.</p>
+	<pre>config.xml (specify main HTML-file or URL here)
+hooks
+  (build hooks - for advanced use)
+merges
+  (platform overrides - for advanced use)
+platforms
+  ios
+    (Xcode project is found here)
+  android
+    ant-build
+      (generated apk-file is found here)
+plugins
+  (plugins are added here using the command line)
+www
+  index.html (main HTML-file specified in config.xml)
+  (other HTML/CSS/JS files used by the app)
+</pre>
+<p>The main HTML-file display when your app launches is specified in <b>config.xml</b>. Usually this file is named <b>index.html</b>, but you can name it anything as long as the name matches the setting in config.xml. You can also specify a connect URL to Evothings Workbench, read on below for further details.</p>
+</div>
+
+<div id="Workflow" class="evo-box">
+	<h2>Workflow Speedup</h2>
+	<p>You can use Cordova as is, without using Evothings Studio. But the workflow will be much faster if you use Evothings. Below we compare the two workflows.</p>
+
+	<h3>Cordova Workflow</h3>
+	<p>Typical workflow when using Cordova WITHOUT Evothings Studio is as follows:</p>
+	<ol>
+		<li><p>Edit your code (HTML/JS) and save</p></li>
+		<li><p>Build the app (cordova build ios/android)</p></li>
+		<li><p>Deploy the app to a device (adb install -r path-to-apk-file)</p></li>
+		<li><p>Launch the app on the device</p></li>
+		<li><p>Repeat above steps for each code change</p></li>
+	</ol>
+
+	<h3>Evothings/Cordova Workflow</h3>
+	<p>Workflow when using Cordova WITH Evothings Studio:</p>
+	<ol>
+		<li><p>Edit your code (HTML/JS) and save</p></li>
+		<li><p>The app is instantly reloaded on the device(s)</p></li>
+	</ol>
+
+	<p>In the next section, we describe how to setup a Cordova project for use with Evothings Studio.</p>
+</div>
+
+<div id="SetupCordovaForEvothings" class="evo-box">
+	<h2>Setup Your Cordova Project for Evothings</h2>
+	<p>Evothings Workbench monitors the files in the current project and reloads the project on connected clients when a file is updated. This works with any web browser or web view widget. Automatic reload-on-save works with any Cordova project.</p>
+
+	<p>Note that the Evothings Client app itself is built with Cordova. It is a plain Cordova app with some custom plugins added, e.g. for socket communication and Bluetooth Low Energy (BLE).</p>
+
+	<p>To Evothings-enable your Cordova project, do as follows:</p>
+	<ol>
+		<li><p>Launch Evothings Workbench.</p></li>
+		<li><p>Copy the connect address displayed in the bottom panel of the Workbench window.</p></li>
+		<li><p>Open the file <b>config.xml</b> (located in your Cordova project folder) in a text editor.</p></li>
+		<li><p>On this line, replace the start page of the Cordova project ("index.html") with the connect address of the Workbench:
+		</p><pre>&lt;content src="index.html" /&gt;</pre>
+		For example, if the address is "192.168.43.131:4042", you would enter this URL:
+		<pre>&lt;content src="http://192.168.43.131:4042" /&gt;</pre>
+		Save the file.<p></p></li>
+		<li><p>Build the project and launch the app on a device. Note that the device must be on the same network as your desktop machine running Evothings Workbench. When you launch the app, it should connect to the Workbench and display the Connect screen.</p></li>
+		<li><p>Find the <b>index.html</b> file of you project in the <b>www</b> folder using a file explorer (Finder on iOS X, Explorer on Windows).</p></li>
+		<li><p>Drag the file <b>index.html</b> into the Evothings Workbench window. This adds your project to the project list.</p></li>
+		<li><p>Click the <b>Run</b> button of your project. Clicking Run activates your project, and tells the Workbench that this is the project to reload when changes are made. You only need to click Run once. Any document you edit and save in the current project will automatically reload the app on your device.</p></li>
+	</ol>
+
+	<p>Now you can just edit your HTML/CSS/JS files in any text editor. When you save a file, the app will be reloaded on the device!</p>
+
+	<p><b><i>As an alternative to editing the config.xml file</i></b> you can create a link or button in index.html that connects to the Workbench. Here is how to do this:</p>
+	<ol>
+		<li><p>Open the file <b>index.html</b> (located in your Cordova project folder) in a text editor.</p></li>
+		<li><p>Add HTML code to make a link that connect to the Workbench when selected.
+		For example, if the Workbench address is "192.168.43.131:4042" the link looks like this:
+		</p><pre>&lt;a href="http://192.168.43.131:4042"&gt;Connect&lt;/a&gt;</pre>
+		Save the file.<p></p></li>
+		<li><p>Proceed to build the project and launch the app on a device. When the app is started, the index.html built into the app will display. When selecting "Connect" the app will connect to the Workbench and you can run any HTML file inside the app, including index.html itself (which is kind of mind-boggling!).</p></li>
+	</ol>
+
+	<p>If the Workbench address changes (for example if you get a new IP address from the WiFi network), you need to update the connect string in config.xml or the link address in index.html and rebuild the Cordova app. In this case you also have to close and restart the Workbench for everything to work.</p>
+
+	<p>Note that you can run your app on multiple devices/platforms, for instance an Android tablet and an iPad. When you update your code, the app will be reloaded on all connected devices!</p>
+</div>
+
+<!--
+<div id="BuildingCustomEvothingsClient" class="evo-box">
+	<h2>Building a Custom Evothings Client App</h2>
+	<p>TODO: Write!</p>
+</div>
+-->
+
+<div id="SupportedPlatforms" class="evo-box">
+	<h2>Supported Platforms</h2>
+
+	<p>Supported mobile platforms for Evothings are iOS and Android.</p>
+
+	<p>Cordova comes with a set of plugins that are supported for a wide range of platforms. Evothings apps can use custom plugins available for iOS and Android. As long as you do not require socket communication or BLE, you should be able to use Evothings Studio to build apps for any platform supported by Cordova.</p>
+
+	<p>The same goes for the Evothings Client app. It is available on iOS and Android, but should be possible to build from source for any platform supported by Cordova. (But you would miss the plugins not available for the target platform.) </p>
+</div>
+
+<script src="./Cordova Guide_files/include-footer.js"></script><div class="evo-box"><p>Copyright © 2013-2015 Evothings AB</p></div><div class="evo-box"><p><a href="http://evothings.com/doc/raw/build/cordova-guide.html">View documentation in plain mode</a></p></div>
+
+</div></div>
+
+
+
+
+<!--
+Building a native app with Apache Cordova:
+
+		<li><p>Install the mobile development kit(s) you want to build for (e.g.
+Android, iOS, Windows Phone).</p></li>
+		<li><p>For iOS you need a Mac with Xcode and an Apple developer
+ membership to install apps on devices.</p></li>
+		<li><p>For Android you need the Android SDK.</p></li>
+		<li><p>Install Apache Cordova and create a template app by following the
+instructions in this tutorial:
+http://cordova.apache.org/docs/en/3.6.0/guide_cli_index.md.html#The%20Command-Line%20Interface</p></li>
+		<li><p>The above step can take some time and effort to complete!</p></li>
+		<li><p>Copy your HTML, CSS, JavaScript and media files to the www folder in
+the Cordova project.</p></li>
+		<li><p>Now build and test your app. The output depends on the platform. For
+iOS you get an Xcode project you can open and run, for Android you get
+and apk-file you can install on your device.</p></li>
+		<li><p>Note that it works perfectly fine to develop the Cordova app in
+Evothings Studio. Just drag and drop index.html in project list in the
+Workbench window. Then run the app using Evothings client, or ...</p></li>
+		<li><p>Enter the connect url in place of index.html in config.xml. When you
+start the app it will connect to the Workbench, just click run to
+launch your app.</p></li>
+		<li><p>You can now build your app and deploy it to the app stores.</p></li>
+		<li><p>Drawback: The build process can be complex and you must have the
+SDKs installed and the right app store memberships. But this is on the
+other hand true of any app you wish to publish.</p></li>
+
+-->
+
+	</div>
+
+	
+
+
+</div>
+
+
+
+  
+    
+  
+
+  <footer class="x-colophon top" role="contentinfo">
+    <div class="x-container max width">
+
+      <div class="x-column x-md x-1-2"><div id="synved_social_follow-4" class="widget widget_synved_social_follow"><h4 class="h-widget">Follow Evothings on</h4><div><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-facebook nolightbox" data-provider="facebook" target="_blank" rel="nofollow" title="Follow us on Facebook" href="https://www.facebook.com/evothings" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:20px;margin-right:20px;"><img alt="facebook" title="Follow us on Facebook" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Cordova Guide_files/facebook.png"></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-twitter nolightbox" data-provider="twitter" target="_blank" rel="nofollow" title="Follow us on Twitter" href="https://twitter.com/evothings" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:20px;margin-right:20px;"><img alt="twitter" title="Follow us on Twitter" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Cordova Guide_files/twitter.png"></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-google_plus nolightbox" data-provider="google_plus" target="_blank" rel="nofollow" title="Follow us on Google+" href="https://plus.google.com/114920485966259796975/posts" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:20px;margin-right:20px;"><img alt="google_plus" title="Follow us on Google+" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Cordova Guide_files/google_plus.png"></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-linkedin nolightbox" data-provider="linkedin" target="_blank" rel="nofollow" title="Find us on Linkedin" href="https://www.linkedin.com/company/3772667" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:20px;margin-right:20px;"><img alt="linkedin" title="Find us on Linkedin" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Cordova Guide_files/linkedin.png"></a><a class="synved-social-button synved-social-button-follow synved-social-size-32 synved-social-resolution-single synved-social-provider-youtube nolightbox" data-provider="youtube" target="_blank" rel="nofollow" title="Find us on YouTube" href="https://www.youtube.com/user/evothings" style="font-size: 0px; width:32px;height:32px;margin:0;margin-bottom:20px;"><img alt="youtube" title="Find us on YouTube" class="synved-share-image synved-social-image synved-social-image-follow" width="32" height="32" style="display: inline; width:32px;height:32px; margin: 0; padding: 0; border: none; box-shadow: none;" src="./Cordova Guide_files/youtube.png"></a></div></div><div id="text-3" class="widget widget_text"><h4 class="h-widget">Newsletter</h4>			<div class="textwidget"><a href="http://evothings.com/signup-newsletter">Sign up to our newsletter</a> to stay updated! Don't worry, we only inform you about major updates.</div>
+		</div></div><div class="x-column x-md x-1-2 last"><div id="search-6" class="widget widget_search"><h4 class="h-widget">Search</h4>
+<form method="get" id="searchform" class="form-search" action="http://evothings.com/">
+  <label for="s" class="visually-hidden">Search</label>
+  <input type="text" id="s" class="search-query" name="s" placeholder="Search">
+</form></div></div>
+    </div>
+  </footer>
+
+
+  
+
+  
+      <div class="x-searchform-overlay">
+        <div class="x-searchform-overlay-inner">
+          <div class="x-container max width">
+            <form method="get" id="searchform" class="form-search center-text" action="http://evothings.com/">
+              <label for="s" class="cfc-h-tx tt-upper">Type and Press “enter” to Search</label>
+              <input type="text" id="s" class="search-query cfc-h-tx center-text tt-upper" name="s">
+            </form>
+          </div>
+        </div>
+      </div>
+
+      
+  </div> <!-- END #top.site -->
+
+  
+<script type="text/javascript" src="./Cordova Guide_files/x-body.min.js"></script>
+<script type="text/javascript" src="./Cordova Guide_files/x-shortcodes-body.min.js"></script>
+
+
+  
+
+  
+
+
+</body></html>

@@ -1,0 +1,13 @@
+/*
+
+Theme Name: X - Child Theme: Renew - Evothings
+Theme URI: http://theme.co/x/
+Author: Themeco
+Author URI: http://theme.co/
+Description: Make all of your modifications to Renew in this child theme.
+Version: 1.0.0
+Template: x
+
+*/
+
+@import url( '../x/framework/css/site/stacks/renew.css' );

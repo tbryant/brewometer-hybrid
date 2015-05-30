@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.baronbrew.brewometer.cordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="BLE">
+        <param name="android-package" value="com.megster.cordova.ble.central.BLECentralPlugin" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <name>Brewometer</name>
+    <description>
+        Reads data from your brewometers.  Buy more brewometers here: http://brewometer.net
+    </description>
+    <author email="info@baronbrew.com" href="http://baronbrew.com">
+        Brewometer Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="www/ui/images/BrewometerCap128.png" />
+    <splash height="480" src="www/ui/images/black.png" width="320" />
+    <splash height="960" src="www/ui/images/black.png" width="640" />
+    <splash height="1024" src="www/ui/images/black.png" width="768" />
+    <splash height="2048" src="www/ui/images/black.png" width="1536" />
+    <splash height="768" src="www/ui/images/black.png" width="1024" />
+    <splash height="1536" src="www/ui/images/black.png" width="2048" />
+    <splash height="1136" src="www/ui/images/black.png" width="640" />
+    <splash height="1334" src="www/ui/images/black.png" width="750" />
+    <splash height="2208" src="www/ui/images/black.png" width="1242" />
+    <splash height="1242" src="www/ui/images/black.png" width="2208" />
+</widget>
