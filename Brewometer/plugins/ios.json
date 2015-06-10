@@ -34,10 +34,10 @@
         }
     },
     "installed_plugins": {
-        "com.megster.cordova.ble": {
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.baronbrew.brewometer.cordova"
         },
-        "org.apache.cordova.device": {
+        "com.megster.cordova.ble": {
             "PACKAGE_NAME": "com.baronbrew.brewometer.cordova"
         }
     },

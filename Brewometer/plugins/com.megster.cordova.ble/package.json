@@ -1,5 +1,5 @@
 {
-    "version": "0.1.6",
+    "version": "0.1.9",
     "name": "com.megster.cordova.ble",
     "cordova_name": "BLE",
     "description": "Bluetooth Low Energy (BLE) Central Plugin",
@@ -13,7 +13,8 @@
     ],
     "platforms": [
         "ios",
-        "android"
+        "android",
+        "wp8"
     ],
     "engines": [
         {

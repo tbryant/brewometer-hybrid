@@ -1,3 +1,15 @@
+= 0.1.9 =
+Add start of WP8 for PGDA
+
+= 0.1.8 =
+Remove SDK version from config.xml (user is responsible for adding)
+Add tests for plugin
+Fix BluetoothLE example for Adafruit nRF8001 #57
+
+= 0.1.7 =
+Add showBluetoothSettings and enable for Android #43
+Update documentation about UUIDs #38
+
 = 0.1.6 =
 startNotification handles both notifications and indications
 

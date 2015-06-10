@@ -566,8 +566,6 @@
 
     CDVPluginResult *pluginResult = nil;
 
-    NSLog(@"%@",command.arguments);
-
     NSString *deviceUUIDString = [command.arguments objectAtIndex:0];
     NSString *serviceUUIDString = [command.arguments objectAtIndex:1];
     NSString *characteristicUUIDString = [command.arguments objectAtIndex:2];
