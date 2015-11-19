@@ -9,7 +9,7 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <icon src="www/ui/images/BrewometerCap128.png" />
+
     <splash src="www/ui/images/black.png" width="320" height="480"/>
     <splash src="www/ui/images/black.png" width="640" height="960"/>
     <splash src="www/ui/images/black.png" width="768" height="1024"/>
@@ -20,6 +20,19 @@
     <splash src="www/ui/images/black.png" width="750" height="1334"/>
     <splash src="www/ui/images/black.png" width="1242" height="2208"/>
     <splash src="www/ui/images/black.png" width="2208" height="1242"/>
+
+    <icon src="icon.png" />
+
+    <!-- iPhone 6 / 6+ -->
+    <icon src="favicon/apple-icon-180x180.png" platform="ios" width="180" height="180" />
+
+    <!-- iPhone / iPod Touch  -->
+    <icon src="favicon/apple-icon-60x60.png" platform="ios" width="60" height="60" />
+    <icon src="favicon/apple-icon-120x120.png" platform="ios" width="120" height="120" />
+
+    <!-- iPad -->
+    <icon src="favicon/apple-icon-76x76.png" platform="ios" width="76" height="76" />
+    <icon src="favicon/apple-icon-152x152.png" platform="ios" width="152" height="152" />
 
 
 </widget>
