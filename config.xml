@@ -10,29 +10,26 @@
     <content src="index.html" />
     <access origin="*" />
 
-    <splash src="www/ui/images/black.png" width="320" height="480"/>
-    <splash src="www/ui/images/black.png" width="640" height="960"/>
-    <splash src="www/ui/images/black.png" width="768" height="1024"/>
-    <splash src="www/ui/images/black.png" width="1536" height="2048"/>
-    <splash src="www/ui/images/black.png" width="1024" height="768"/>
-    <splash src="www/ui/images/black.png" width="2048" height="1536"/>
-    <splash src="www/ui/images/black.png" width="640" height="1136"/>
-    <splash src="www/ui/images/black.png" width="750" height="1334"/>
-    <splash src="www/ui/images/black.png" width="1242" height="2208"/>
-    <splash src="www/ui/images/black.png" width="2208" height="1242"/>
-
     <icon src="icon.png" />
-
     <!-- iPhone 6 / 6+ -->
-    <icon src="favicon/apple-icon-180x180.png" platform="ios" width="180" height="180" />
+    <icon src="icon-60@3x.png" platform="ios" width="180" height="180" />
 
     <!-- iPhone / iPod Touch  -->
-    <icon src="favicon/apple-icon-60x60.png" platform="ios" width="60" height="60" />
-    <icon src="favicon/apple-icon-120x120.png" platform="ios" width="120" height="120" />
+    <icon src="icon-60.png" platform="ios" width="60" height="60" />
+    <icon src="icon-60@2x.png" platform="ios" width="120" height="120" />
 
     <!-- iPad -->
-    <icon src="favicon/apple-icon-76x76.png" platform="ios" width="76" height="76" />
-    <icon src="favicon/apple-icon-152x152.png" platform="ios" width="152" height="152" />
+    <icon src="icon-76.png" platform="ios" width="76" height="76" />
+    <icon src="icon-76@2x.png" platform="ios" width="152" height="152" />
 
+    <!-- Settings Icon -->
+    <icon src="icon-small.png" platform="ios" width="29" height="29" />
+    <icon src="icon-small@2x.png" platform="ios" width="58" height="58" />
+
+    <!-- Spotlight Icon -->
+    <icon src="icon-40.png" platform="ios" width="40" height="40" />
+    <icon src="icon-40@2x.png" platform="ios" width="80" height="80" />
+
+    <splash src="splash.png" />
 
 </widget>
